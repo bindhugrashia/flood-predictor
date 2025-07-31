@@ -11,10 +11,8 @@ import os
 from sklearn.preprocessing import LabelEncoder
 
 # Optional: set this as a default if env variable isn't set
-HF_TOKEN = os.getenv("HF_TOKEN", "your-huggingface-token-here")
+HF_TOKEN = os.getenv("HF_TOKEN")
 
-if HF_TOKEN:
-    login(token=HF_TOKEN)
 
 @st.cache_resource
 def load_districts():
